@@ -1,0 +1,54 @@
+{
+  "sysCategory": [
+    {
+      "fileStorages": [
+        {
+          "fileId": "file00004",
+          "fileName": "Python_Basics_Guide",
+          "storagePath": "stream/78/65/00106250790864562421764687.pdf",
+          "fileSuffix": "pdf",
+          "publicUrl": "http://www.baidu.com/xxx/xxx/xxxpy.txt",
+          "fileSize": "123456"
+        },
+        {
+          "fileId": "file00005",
+          "fileName": "Python_Advanced_Guide",
+          "storagePath": "/xxx/xxx/xxx2.txt",
+          "fileSuffix": "txt",
+          "publicUrl": "http://www.baidu.com/xxx/xxx/xxxpy2.txt",
+          "fileSize": "123456"
+        }
+      ],
+      "subCategory": [
+        {
+          "fileStorages": [
+            {
+              "fileId": "file00004",
+              "fileName": "Medical_Virology_Knowledge_Graph",
+              "storagePath": "stream/40/86/00106250791926853795844449.docx",
+              "fileSuffix": "docx",
+              "publicUrl": "http://www.baidu.com/xxx/xxx/xxxpy.txt",
+              "fileSize": "123456"
+            },
+            {
+              "fileId": "file00005",
+              "fileName": "Student_Handbook_2023",
+              "storagePath": "stream/85/11/00106250792497027481606005.pdf",
+              "fileSuffix": "pdf",
+              "publicUrl": "http://www.baidu.com/xxx/xxx/xxxpy2.txt",
+              "fileSize": "123456"
+            }
+          ],
+          "categoryId": "234324234",
+          "parentId": "1010010101",
+          "categoryName": "Secondary_Category"
+        }
+      ],
+      "categoryId": "1010010101",
+      "parentId": "0",
+      "categoryName": "Primary_Category",
+      "level": 1
+    }
+  ],
+  "syncId": "123"
+}

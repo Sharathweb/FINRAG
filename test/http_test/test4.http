@@ -1,0 +1,10 @@
+@app.get("/async-endpoint/")
+async def check_async_status(task_id: str = "default"):
+    # Logic to check the status of a background task
+    # You could integrate this with a task queue like Celery or simply 
+    # check a status dictionary in your memory.
+    return ResponseFactory.success(data={
+        "task_id": task_id,
+        "status": "processing",
+        "message": "Task is currently being handled."
+    }).to_dict()

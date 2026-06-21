@@ -1,0 +1,40 @@
+2026-06-17 20:43:45.456|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 20:51:04.462|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 21:01:13.748|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 21:03:12.853|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 21:03:13.762|ERROR  |app.core.vectorstore.customer_milvus_client:init:47|Initialization failed: 'CustomerMilvusClient' object has no attribute 'fields'
+2026-06-17 21:08:08.546|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 21:08:09.962|INFO   |app.core.vectorstore.customer_milvus_client:init:38|Creating collection 'FIN_RAG'
+2026-06-17 21:08:11.091|INFO   |app.core.vectorstore.customer_milvus_client:init:46|Initialization successful!
+2026-06-17 21:08:13.705|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:83|File D:\RAG Project\FinRAG\data\your_file_name_here.pdf not found locally. Skipping.
+2026-06-17 21:10:17.773|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 21:10:19.216|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 21:10:19.245|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\View Filing Data.pdf
+2026-06-17 21:10:19.247|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:42|开始解析文件,文件越大,解析所需时间越长,大文件请耐心等待...
+2026-06-17 21:36:58.134|INFO   |app.core.preprocessor.file_processor:__init__:37|Success init file processor
+2026-06-17 21:36:59.562|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 21:36:59.582|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\View Filing Data.pdf
+2026-06-17 21:36:59.582|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:42|开始解析文件,文件越大,解析所需时间越长,大文件请耐心等待...
+2026-06-17 21:42:12.445|INFO   |app.core.preprocessor.file_processor:__init__:21|Successfully initialized file processor
+2026-06-17 21:42:13.268|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 21:42:13.287|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\View Filing Data.pdf
+2026-06-17 21:42:13.287|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:26|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-17 21:42:20.062|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:50|Number of documents before secondary split: 49
+2026-06-17 21:42:20.062|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:52|Number of documents after secondary split: 55
+2026-06-17 21:42:33.038|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:115|Successfully indexed file into vector database.
+2026-06-17 22:20:12.743|INFO   |app.core.preprocessor.file_processor:__init__:21|Successfully initialized file processor
+2026-06-17 22:20:13.328|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 22:20:23.191|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 3 relevant chunks.
+2026-06-17 22:20:23.191|INFO   |app.core.chat.open_chat:chat:23|Sending messages to Gemini: [{'role': 'user', 'content': '参考信息：\n2025  Cover Page  Auditor Information  Financial Statements  Notes to Financial Statements  Accounting Policies  Notes Tables  Notes Details  All Reports  Entity Information [Line Items] Document Type Document Annual Report Current Fiscal Year End Date Document Period End Date Document Transition\n\n000% Notes due 2027 Entity Information [Line Items] Title of 12(b) Security  No Trading Symbol Flag Security Exchange Name 1.\n\n500% Notes due 2031 Entity Information [Line Items] Title of 12(b) Security  No Trading Symbol Flag Security Exchange Name 3.\n---\n我的问题或指令：\nWhat are the main financial risks mentioned in this document?\n---\n请根据上述参考信息回答我的问题或回复我的指令。\n- 我的问题或指令是什么语种，你就用什么语种回复.\n- 前面的参考信息可能有用，也可能没用, 请自行判别。\n- 如果前面的参考信息与问题有关，你需要从我给出的参考信息中选出与我的问题最相关的那些，来为你的回答提供依据。\n- 如果前面的参考信息与问题无关，请回答：根据参考信息,无法得到问题的答案.\n- 不要随机编造答案\n\n你的回复：'}]
+2026-06-17 22:23:38.744|INFO   |app.core.preprocessor.file_processor:__init__:21|Successfully initialized file processor
+2026-06-17 22:23:39.342|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 22:23:46.074|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 3 relevant chunks.
+2026-06-17 22:25:19.846|INFO   |app.core.preprocessor.file_processor:__init__:21|Successfully initialized file processor
+2026-06-17 22:25:20.455|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 22:25:27.458|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 3 relevant chunks.
+2026-06-17 22:29:10.946|INFO   |app.core.preprocessor.file_processor:__init__:21|Successfully initialized file processor
+2026-06-17 22:29:11.518|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 22:29:17.433|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 3 relevant chunks.
+2026-06-17 22:35:41.438|INFO   |app.core.preprocessor.file_processor:__init__:21|Successfully initialized file processor
+2026-06-17 22:35:42.195|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-17 22:35:49.201|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 3 relevant chunks.

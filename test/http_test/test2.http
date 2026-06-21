@@ -1,0 +1,11 @@
+from typing import List, Optional
+
+# Update these specific fields to be Optional:
+class SysCategory(BaseModel):
+    # Use Optional and [] as default to prevent crashes on empty data
+    fileStorages: Optional[List[FileStorage]] = [] 
+    subCategory: Optional[List[SubCategory]] = []
+    categoryId: str
+    parentId: str
+    categoryName: str
+    level: int

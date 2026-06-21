@@ -1,0 +1,34 @@
+2026-06-18 18:32:22.660|ERROR  |app.finrag_server:chat:85|RAG Chat error: 'CustomerMilvusClient' object has no attribute 'get_rag_result'
+2026-06-18 18:48:44.413|ERROR  |app.finrag_server:chat:85|RAG Chat error: 'CustomerMilvusClient' object has no attribute 'get_rag_result'
+2026-06-18 18:52:43.883|ERROR  |app.finrag_server:chat:91|RAG Chat error: name 'embedding_client' is not defined
+2026-06-18 19:00:08.572|ERROR  |app.finrag_server:chat:102|RAG Chat error: name 'embedding_client' is not defined
+2026-06-18 19:00:08.573|ERROR  |app.finrag_server:chat:105|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 71, in chat
+    query_emb = embedding_client.get_embedding([user_input])
+               ^^^^^^^^^^^^^^^^
+NameError: name 'embedding_client' is not defined
+
+2026-06-19 22:36:39.622|ERROR  |app.finrag_server:chat:111|RAG Chat error: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
+2026-06-19 22:36:39.752|ERROR  |app.finrag_server:chat:114|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 99, in chat
+    suggested = open_chat.chat(suggestion_messages)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
+
+2026-06-19 23:30:12.018|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1500) of 0th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
+2026-06-19 23:54:51.364|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1169) of 272th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
+2026-06-20 00:08:02.455|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1047) of 312th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>

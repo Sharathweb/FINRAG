@@ -1,0 +1,155 @@
+2026-06-18 14:44:23.395|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 14:44:24.371|INFO   |app.core.vectorstore.customer_milvus_client:init:38|Creating collection 'FIN_RAG'
+2026-06-18 14:44:24.969|INFO   |app.core.vectorstore.customer_milvus_client:init:46|Initialization successful!
+2026-06-18 14:44:27.526|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\View Filing Data.pdf
+2026-06-18 14:44:27.526|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-18 14:44:43.453|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-18 14:44:43.453|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 10
+2026-06-18 14:44:53.510|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:115|Successfully indexed file into vector database.
+2026-06-18 14:45:53.180|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 14:45:54.077|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 14:46:02.997|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-18 18:13:48.711|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 18:22:29.021|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 18:25:44.254|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 18:25:44.962|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 18:31:04.502|INFO   |app.finrag_server:chat:53|Chat request received for chatId: string
+2026-06-18 18:32:22.658|INFO   |app.finrag_server:chat:53|Chat request received for chatId: session-123
+2026-06-18 18:32:22.660|INFO   |app.finrag_server:chat:64|Executing RAG Knowledge Query...
+2026-06-18 18:32:22.660|ERROR  |app.finrag_server:chat:85|RAG Chat error: 'CustomerMilvusClient' object has no attribute 'get_rag_result'
+2026-06-18 18:48:44.413|INFO   |app.finrag_server:chat:53|Chat request received for chatId: test-session-001
+2026-06-18 18:48:44.413|INFO   |app.finrag_server:chat:64|Executing RAG Knowledge Query...
+2026-06-18 18:48:44.413|ERROR  |app.finrag_server:chat:85|RAG Chat error: 'CustomerMilvusClient' object has no attribute 'get_rag_result'
+2026-06-18 18:51:52.305|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 18:51:53.391|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 18:52:43.883|INFO   |app.finrag_server:chat:53|Chat request received for chatId: test-session-001
+2026-06-18 18:52:43.883|INFO   |app.finrag_server:chat:64|Executing RAG Knowledge Query...
+2026-06-18 18:52:43.883|ERROR  |app.finrag_server:chat:91|RAG Chat error: name 'embedding_client' is not defined
+2026-06-18 18:58:51.264|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 18:58:52.493|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 19:00:08.569|INFO   |app.finrag_server:chat:53|Chat request received for chatId: test-session-001
+2026-06-18 19:00:08.571|INFO   |app.finrag_server:chat:67|Executing RAG Knowledge Query...
+2026-06-18 19:00:08.572|ERROR  |app.finrag_server:chat:102|RAG Chat error: name 'embedding_client' is not defined
+2026-06-18 19:00:08.573|ERROR  |app.finrag_server:chat:105|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 71, in chat
+    query_emb = embedding_client.get_embedding([user_input])
+               ^^^^^^^^^^^^^^^^
+NameError: name 'embedding_client' is not defined
+
+2026-06-18 19:05:24.880|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 19:05:25.824|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 19:07:11.251|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 19:07:12.065|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 19:08:04.490|INFO   |app.finrag_server:chat:57|Chat request received for chatId: test-session-001
+2026-06-18 19:08:04.490|INFO   |app.finrag_server:chat:71|Executing RAG Knowledge Query...
+2026-06-18 19:08:09.823|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 0 relevant chunks.
+2026-06-18 19:12:42.586|INFO   |app.finrag_server:chat:57|Chat request received for chatId: test-session-001
+2026-06-18 19:12:42.588|INFO   |app.finrag_server:chat:71|Executing RAG Knowledge Query...
+2026-06-18 19:12:43.184|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-18 20:34:38.782|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 20:43:53.516|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-18 20:43:54.903|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-18 20:51:29.899|INFO   |app.finrag_server:chat:57|Chat request received for chatId: ui-session
+2026-06-18 20:51:29.900|INFO   |app.finrag_server:chat:71|Executing RAG Knowledge Query...
+2026-06-18 20:51:35.800|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 15:57:13.232|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 15:57:15.052|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 16:14:58.928|INFO   |app.finrag_server:chat:58|Chat request received for chatId: ui-session
+2026-06-19 16:14:58.928|INFO   |app.finrag_server:chat:72|Executing RAG Knowledge Query...
+2026-06-19 16:15:07.822|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 20:56:49.603|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:04:35.444|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:04:36.604|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 21:07:11.572|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:07:12.196|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 21:07:44.867|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:07:47.326|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 21:10:51.584|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:10:52.239|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 21:11:17.113|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:11:18.574|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 21:17:27.133|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:17:28.243|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 21:35:59.964|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
+2026-06-19 21:35:59.968|INFO   |app.finrag_server:chat:76|Executing RAG Knowledge Query...
+2026-06-19 21:36:08.058|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 21:42:41.665|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 21:42:43.555|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 22:31:07.716|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 22:31:09.578|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 22:31:51.033|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\StarBucks.pdf
+2026-06-19 22:31:51.035|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-19 22:32:13.289|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-19 22:32:13.289|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 7
+2026-06-19 22:32:23.921|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:115|Successfully indexed file into vector database.
+2026-06-19 22:36:24.316|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
+2026-06-19 22:36:24.316|INFO   |app.finrag_server:chat:76|Executing RAG Knowledge Query...
+2026-06-19 22:36:24.689|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 22:36:39.622|ERROR  |app.finrag_server:chat:111|RAG Chat error: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
+2026-06-19 22:36:39.752|ERROR  |app.finrag_server:chat:114|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 99, in chat
+    suggested = open_chat.chat(suggestion_messages)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}]
+
+2026-06-19 22:41:00.576|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 22:41:01.979|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 22:41:56.264|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\StarBucks.pdf
+2026-06-19 22:41:56.265|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-19 22:42:06.822|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-19 22:42:06.824|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 7
+2026-06-19 22:42:16.605|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:115|Successfully indexed file into vector database.
+2026-06-19 22:43:44.708|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
+2026-06-19 22:43:44.708|INFO   |app.finrag_server:chat:74|Executing RAG Knowledge Query...
+2026-06-19 22:43:45.051|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 22:46:10.338|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
+2026-06-19 22:46:10.338|INFO   |app.finrag_server:chat:74|Executing RAG Knowledge Query...
+2026-06-19 22:46:10.838|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 22:57:26.750|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\StarBucks.pdf
+2026-06-19 22:57:26.751|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-19 22:58:55.268|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-19 22:58:55.323|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 1799
+2026-06-19 23:05:50.191|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:115|Successfully indexed file into vector database.
+2026-06-19 23:06:42.256|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
+2026-06-19 23:06:42.256|INFO   |app.finrag_server:chat:74|Executing RAG Knowledge Query...
+2026-06-19 23:06:43.360|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 5 relevant chunks.
+2026-06-19 23:09:36.602|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 23:09:37.538|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 23:11:06.428|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 23:11:07.099|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 23:12:19.254|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\StarBucks.pdf
+2026-06-19 23:12:19.256|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-19 23:14:17.230|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-19 23:14:17.255|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 509
+2026-06-19 23:30:12.018|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1500) of 0th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
+2026-06-19 23:39:01.724|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 23:39:02.577|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 23:39:32.278|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\StarBucks.pdf
+2026-06-19 23:39:32.279|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-19 23:41:18.856|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-19 23:41:18.903|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 848
+2026-06-19 23:54:51.364|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1169) of 272th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
+2026-06-19 23:56:44.912|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-19 23:56:46.078|INFO   |app.core.vectorstore.customer_milvus_client:init:35|Collection 'FIN_RAG' already exists.
+2026-06-19 23:57:19.414|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:86|Processing local file: D:\RAG Project\FinRAG\data\StarBucks.pdf
+2026-06-19 23:57:19.415|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-19 23:58:46.203|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-19 23:58:46.234|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-20 00:08:02.455|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1047) of 312th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
+2026-06-20 00:08:26.112|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
+2026-06-20 00:08:26.114|INFO   |app.finrag_server:chat:74|Executing RAG Knowledge Query...
+2026-06-20 00:08:29.177|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 10 relevant chunks.

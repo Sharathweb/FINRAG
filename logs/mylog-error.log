@@ -1,0 +1,2 @@
+2026-06-17 21:03:13.762|ERROR  |app.core.vectorstore.customer_milvus_client:init:47|Initialization failed: 'CustomerMilvusClient' object has no attribute 'fields'
+2026-06-17 21:08:13.705|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:83|File D:\RAG Project\FinRAG\data\your_file_name_here.pdf not found locally. Skipping.

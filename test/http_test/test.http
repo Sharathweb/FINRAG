@@ -1,0 +1,28 @@
+from pydantic import BaseModel
+from typing import List, Optional
+
+class FileStorage(BaseModel):
+    fileId: str
+    fileName: str
+    storagePath: str
+    fileSuffix: str
+    publicUrl: str
+    fileSize: str
+
+class SubCategory(BaseModel):
+    fileStorages: List[FileStorage]
+    categoryId: str
+    parentId: str
+    categoryName: str
+
+class SysCategory(BaseModel):
+    fileStorages: List[FileStorage]
+    subCategory: List[SubCategory]
+    categoryId: str
+    parentId: str
+    categoryName: str
+    level: int
+
+class Item(BaseModel):
+    syncId: str
+    sysCategory: List[SysCategory]

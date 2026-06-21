@@ -1,0 +1,19 @@
+class FileStorage(BaseModel):
+    fileId: str
+    fileName: str
+    storagePath: str
+    fileSuffix: str
+    # Add extra fields present in test3.http
+    id: Optional[str] = None
+    gmtCreate: Optional[int] = None
+    fileSize: Optional[int] = None 
+    # Use '...' or default values to handle incoming nulls
+    fileMeatData: Optional[Any] = None 
+
+class SubCategory(BaseModel):
+    categoryId: str
+    categoryName: str
+    fileStorages: Optional[List[FileStorage]] = []
+    # Add extra fields
+    id: Optional[str] = None
+    level: Optional[int] = None
