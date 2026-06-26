@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /FinRAG
 
@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com
 # Copy application
 COPY . .
 
+RUN chmod +x start.sh
+
 # Simply run your application entry point directly
 # No need for bin/start.sh or Docker-based database orchestration
-CMD ["python", "main.py"]
+CMD ["./start.sh"]

@@ -1,5 +1,8 @@
 import streamlit as st
 import requests
+import os
+
+port = int(os.environ.get("PORT", 8501))
 
 # 1. Page Config
 st.set_page_config(page_title="FinRAG Dashboard", layout="wide")

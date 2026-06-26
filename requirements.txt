@@ -17,3 +17,4 @@ pikepdf==8.15.1
 python-docx==1.1.2
 dashscope==1.19.1
 oss2==2.18.5
+Streamlit==1.58.0
