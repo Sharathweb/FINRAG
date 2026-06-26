@@ -12,6 +12,7 @@ class BaseResponse:
     timestamp: float = field(default_factory=time.time)
 
     def to_dict(self):
+        # This now returns a clean dictionary for JSONResponse
         return {
             "success": self.success,
             "message": self.message,

@@ -32,3 +32,616 @@ openai.InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message'
 2026-06-19 23:30:12.018|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1500) of 0th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
 2026-06-19 23:54:51.364|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1169) of 272th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
 2026-06-20 00:08:02.455|ERROR  |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:117|Failed to write StarBucks.pdf to vector database: <MilvusException: (code=1100, message=the length (1047) of 312th string exceeds max length (1024): expected=valid length string, actual=string length exceeds max length: invalid parameter)>
+2026-06-22 20:54:19.295|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 20:54:19.303|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 20:58:29.210|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 20:58:29.214|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:02:03.249|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:02:03.260|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:07:45.838|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:07:45.844|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:11:50.856|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:11:50.856|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:14:06.413|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:14:06.425|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:15:32.419|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:15:32.435|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:17:44.205|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:17:44.206|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:19:55.758|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:19:55.758|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 22:17:33.264|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 22:17:33.291|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = None
+                   ^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 22:18:03.701|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 22:18:03.704|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = None
+                   ^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-23 00:30:14.699|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:36:26.462|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:36:58.295|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:37:26.545|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:41:09.451|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:45:18.367|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:48:57.013|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:48:57.018|ERROR  |app.finrag_server:chat:112|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:52:17.098|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1main, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+]
+2026-06-23 00:52:17.115|ERROR  |app.finrag_server:chat:112|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:54:11.723|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1main, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+]
+2026-06-23 00:54:11.730|ERROR  |app.finrag_server:chat:112|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:56:27.305|ERROR  |app.finrag_server:chat:128|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 01:14:53.745|ERROR  |app.finrag_server:update_vector:190|Error during ingestion: <DataNotMatchException: (code=1, message=Insert missed an field `id` to collection without set nullable==true or set default_value)>
+2026-06-23 11:34:14.891|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: <DataNotMatchException: (code=1, message=Insert missed an field `id` to collection without set nullable==true or set default_value)>
+2026-06-23 11:42:01.563|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: 'NoneType' object has no attribute 'filename'
+2026-06-23 11:42:12.904|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: 'NoneType' object has no attribute 'filename'
+2026-06-23 11:53:17.332|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: 'NoneType' object has no attribute 'filename'
+2026-06-23 12:43:27.995|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 12:43:28.001|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    user_input = messages[-1]['content']
+                 ~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-06-23 12:44:01.618|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 12:44:01.620|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    user_input = messages[-1]['content']
+                 ~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-06-23 12:59:41.387|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 12:59:41.392|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    print(f"DEBUG: Calling Gemini for direct chat. Messages count: {len(messages)}")
+                 ^^^^^^^^^^^^
+IndexError: list index out of range
+
+2026-06-23 13:16:37.828|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 13:16:37.832|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    if not category_ids:
+                     ^^^^
+IndexError: list index out of range
+
+2026-06-23 13:38:17.209|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 13:38:17.214|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    user_input = messages[-1]['content']
+                 ~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-06-23 14:00:55.673|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:00:55.681|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    # 2. Branching Logic
+                     ^^^^
+IndexError: list index out of range
+
+2026-06-23 14:18:45.766|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:18:45.772|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+IndexError: list index out of range
+
+2026-06-23 14:30:25.859|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:30:25.864|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+IndexError: list index out of range
+
+2026-06-23 14:45:58.400|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:45:58.404|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    try:
+         
+IndexError: list index out of range
+
+2026-06-23 15:14:46.858|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 15:14:46.870|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    if not messages:
+                     
+IndexError: list index out of range
+
+2026-06-23 15:14:54.540|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 15:14:54.544|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    if not messages:
+                     
+IndexError: list index out of range
+
+2026-06-23 20:24:44.247|ERROR  |app.finrag_server:chat:181|RAG Chat CRITICAL ERROR: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+2026-06-23 20:24:44.282|ERROR  |app.finrag_server:chat:182|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 140, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+
+2026-06-23 20:46:07.913|ERROR  |app.finrag_server:chat:181|RAG Chat CRITICAL ERROR: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+2026-06-23 20:46:07.920|ERROR  |app.finrag_server:chat:182|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 140, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+
+2026-06-24 00:35:40.341|ERROR  |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:120|DEBUG: Error in API call: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 19.466186832s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}]
+2026-06-24 00:46:55.817|ERROR  |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:120|DEBUG: Error in API call: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 3.971369891s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}]
+2026-06-25 12:57:57.594|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:06:47.999|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:20:33.930|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:23:17.823|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:31:41.381|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 20:27:07.542|ERROR  |app.finrag_server:chat:89|DEBUG: response is None! Check if send_to_gemini or rag_result failed.
+2026-06-25 20:30:39.829|ERROR  |app.finrag_server:chat:92|DEBUG: response is None! Check if send_to_gemini or rag_result failed.
+2026-06-25 20:35:18.728|ERROR  |app.finrag_server:chat:108|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 83, in chat
+    logger.info(f"DEBUG: Embedding generated: {len(query_emb) if query_emb else 'None'}")
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+2026-06-25 20:47:05.932|ERROR  |app.finrag_server:chat:108|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 83, in chat
+    logger.info(f"DEBUG: Embedding generated: {len(query_emb) if query_emb else 'None'}")
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+2026-06-25 21:08:13.869|ERROR  |app.finrag_server:chat:112|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 84, in chat
+    if query_emb is not None:
+       ^^^^^^^^^
+NameError: name 'query_emb' is not defined
+
+2026-06-25 21:10:26.264|ERROR  |app.finrag_server:chat:112|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 84, in chat
+    #query_emb = embedding_client.get_embedding([user_input])
+       ^^^^^^^^^
+NameError: name 'query_emb' is not defined
+
+2026-06-25 21:11:17.700|ERROR  |app.finrag_server:chat:114|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 90, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 97, in retrieval_and_generate
+    results = self.client.search(**search_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1255, in search
+    check_id_and_data(ids, data)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\check.py", line 414, in check_id_and_data
+    raise ParamError(message="Either ids or data must be provided")
+pymilvus.exceptions.ParamError: <ParamError: (code=1, message=Either ids or data must be provided)>
+
+2026-06-25 21:15:43.562|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:26:45.521|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:30:40.896|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:35:24.906|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:51:10.378|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.

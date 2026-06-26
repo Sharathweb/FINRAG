@@ -153,3 +153,963 @@ openai.InternalServerError: Error code: 503 - [{'error': {'code': 503, 'message'
 2026-06-20 00:08:26.112|INFO   |app.finrag_server:chat:62|Chat request received for chatId: ui-session
 2026-06-20 00:08:26.114|INFO   |app.finrag_server:chat:74|Executing RAG Knowledge Query...
 2026-06-20 00:08:29.177|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:137|Retrieved 10 relevant chunks.
+2026-06-22 20:17:53.027|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-22 20:25:48.609|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-22 20:46:01.669|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-22 20:48:57.328|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-22 20:50:34.442|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-22 20:50:37.519|INFO   |app.core.vectorstore.customer_milvus_client:init:33|Creating collection 'FIN_RAG'
+2026-06-22 20:54:16.066|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 20:54:16.066|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 20:54:19.295|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 20:54:19.303|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 20:58:28.091|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 20:58:28.092|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 20:58:29.210|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 20:58:29.214|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:02:02.389|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:02:02.389|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:02:03.249|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:02:03.260|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:07:45.256|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:07:45.257|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:07:45.838|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:07:45.844|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:11:50.325|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:11:50.325|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:11:50.856|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:11:50.856|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:14:05.596|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:14:05.596|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:14:06.413|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:14:06.425|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:14:56.233|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-22 21:14:57.881|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-22 21:15:30.024|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:15:30.025|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:15:32.419|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:15:32.435|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:17:43.429|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:17:43.429|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:17:44.205|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:17:44.206|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 21:19:55.227|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 21:19:55.228|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 21:19:55.758|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 21:19:55.758|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = open_chat.chat(messages)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 22:17:32.436|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 22:17:32.440|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 22:17:33.264|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 22:17:33.291|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = None
+                   ^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 22:18:01.858|INFO   |app.finrag_server:chat:62|Chat request received for chatId: chat_001
+2026-06-22 22:18:01.859|INFO   |app.finrag_server:chat:71|Executing Open Chat...
+2026-06-22 22:18:03.701|ERROR  |app.finrag_server:chat:115|RAG Chat error: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+2026-06-22 22:18:03.704|ERROR  |app.finrag_server:chat:117|Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 72, in chat
+    response = None
+                   ^
+  File "D:\RAG Project\FinRAG\app\core\chat\open_chat.py", line 20, in chat
+    completion = self.client.chat.completions.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - [{'error': {'code': 400, 'message': 'Request has empty input.', 'status': 'INVALID_ARGUMENT'}}]
+
+2026-06-22 23:58:20.956|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:03:09.830|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:16:01.708|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:16:04.500|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 00:16:51.020|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:28:51.824|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:28:53.413|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 00:30:14.699|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:36:26.462|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:36:58.295|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:37:26.545|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:41:09.451|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:45:18.367|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:48:12.469|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:48:14.343|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 00:48:57.013|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 400,
+    "message": "* GenerateContentRequest.contents: contents is not specified\n",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+]
+2026-06-23 00:48:57.018|ERROR  |app.finrag_server:chat:112|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:51:13.042|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:51:13.880|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 00:52:17.098|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1main, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+]
+2026-06-23 00:52:17.115|ERROR  |app.finrag_server:chat:112|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:54:11.723|ERROR  |app.finrag_server:send_to_gemini:64|Gemini API 400 Error Body: [{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-1.5-flash is not found for API version v1main, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+]
+2026-06-23 00:54:11.730|ERROR  |app.finrag_server:chat:112|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:56:00.362|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:56:02.025|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 00:56:27.305|ERROR  |app.finrag_server:chat:128|CHAT FAILURE: Response is None after AI processing.
+2026-06-23 00:59:17.100|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 00:59:18.191|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 01:03:27.500|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 01:05:06.322|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 01:05:06.353|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 01:14:53.745|ERROR  |app.finrag_server:update_vector:190|Error during ingestion: <DataNotMatchException: (code=1, message=Insert missed an field `id` to collection without set nullable==true or set default_value)>
+2026-06-23 01:23:06.207|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 01:24:24.959|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 01:24:24.991|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 11:24:08.978|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 11:24:11.506|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 11:24:46.648|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 11:26:22.622|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 11:26:22.649|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 11:34:14.891|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: <DataNotMatchException: (code=1, message=Insert missed an field `id` to collection without set nullable==true or set default_value)>
+2026-06-23 11:42:01.563|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: 'NoneType' object has no attribute 'filename'
+2026-06-23 11:42:12.904|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: 'NoneType' object has no attribute 'filename'
+2026-06-23 11:53:17.332|ERROR  |app.finrag_server:update_vector:192|Error during ingestion: 'NoneType' object has no attribute 'filename'
+2026-06-23 11:58:10.595|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 11:58:13.453|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 11:59:29.435|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 12:01:05.562|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 12:01:05.579|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 12:21:25.836|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 12:21:26.832|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 12:21:51.103|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 12:23:29.161|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 12:23:29.197|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 12:31:56.898|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 12:33:09.692|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 12:34:39.913|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 12:34:40.137|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 12:43:06.286|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 12:43:27.995|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 12:43:28.001|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    user_input = messages[-1]['content']
+                 ~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-06-23 12:44:01.618|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 12:44:01.620|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    user_input = messages[-1]['content']
+                 ~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-06-23 12:49:04.572|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 12:50:34.669|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 12:50:34.699|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 12:59:25.604|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 12:59:41.387|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 12:59:41.392|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    print(f"DEBUG: Calling Gemini for direct chat. Messages count: {len(messages)}")
+                 ^^^^^^^^^^^^
+IndexError: list index out of range
+
+2026-06-23 13:06:07.970|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 13:07:56.576|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 13:07:56.608|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 13:15:22.122|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 13:16:37.828|ERROR  |app.finrag_server:chat:159|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 13:16:37.832|ERROR  |app.finrag_server:chat:160|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 120, in chat
+    if not category_ids:
+                     ^^^^
+IndexError: list index out of range
+
+2026-06-23 13:26:16.529|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 13:26:17.653|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 13:27:44.014|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 13:27:44.763|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 13:28:53.478|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 13:29:56.795|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 13:29:56.819|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 13:37:20.888|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 13:38:17.209|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 13:38:17.214|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    user_input = messages[-1]['content']
+                 ~~~~~~~~^^^^
+IndexError: list index out of range
+
+2026-06-23 13:44:50.961|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 13:45:50.439|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 13:45:50.471|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 13:53:57.755|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 14:00:55.673|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:00:55.681|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    # 2. Branching Logic
+                     ^^^^
+IndexError: list index out of range
+
+2026-06-23 14:10:16.196|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 14:11:14.663|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 14:11:14.684|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 14:18:26.823|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 14:18:45.766|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:18:45.772|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+IndexError: list index out of range
+
+2026-06-23 14:21:42.837|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 14:22:45.059|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 14:22:45.088|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 14:30:07.383|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 14:30:25.859|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:30:25.864|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+IndexError: list index out of range
+
+2026-06-23 14:37:11.353|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 14:38:12.596|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 14:38:12.629|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 14:45:44.696|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 14:45:58.400|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 14:45:58.404|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    try:
+         
+IndexError: list index out of range
+
+2026-06-23 14:50:05.921|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 14:51:05.637|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 14:51:05.653|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 14:58:30.715|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 15:14:46.858|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 15:14:46.870|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    if not messages:
+                     
+IndexError: list index out of range
+
+2026-06-23 15:14:54.540|ERROR  |app.finrag_server:chat:171|RAG Chat CRITICAL ERROR: list index out of range
+2026-06-23 15:14:54.544|ERROR  |app.finrag_server:chat:172|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 124, in chat
+    if not messages:
+                     
+IndexError: list index out of range
+
+2026-06-23 15:19:06.501|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 15:19:07.523|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 15:19:34.001|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 15:20:46.151|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 15:20:46.188|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 15:58:16.433|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 15:58:17.675|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 15:59:08.360|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 16:00:22.270|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 16:00:22.302|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 16:11:13.012|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 16:11:14.053|INFO   |app.core.vectorstore.customer_milvus_client:init:33|Creating collection 'FIN_RAG'
+2026-06-23 16:12:07.200|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 16:13:28.811|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 16:13:28.841|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 16:22:08.721|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 16:22:30.035|INFO   |app.finrag_server:chat:104|DEBUG: Raw chatMessages received: [{'role': 'user', 'rawContent': 'What is the "Back to Starbucks" strategy, and why was it implemented?'}]
+2026-06-23 16:25:30.687|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 16:26:43.226|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 16:26:43.258|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 16:33:18.565|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 20:11:51.707|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 20:11:53.984|INFO   |app.core.vectorstore.customer_milvus_client:init:40|Collection 'FIN_RAG' already exists.
+2026-06-23 20:12:17.897|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 20:14:20.336|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 20:14:20.362|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 20:22:10.743|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 20:24:42.626|INFO   |app.finrag_server:chat:104|DEBUG: Raw chatMessages received: [{'role': 'user', 'rawContent': 'What is the "Back to Starbucks" strategy, and why was it implemented?'}]
+2026-06-23 20:24:42.674|INFO   |app.finrag_server:chat:133|DEBUG: Sanitized messages count: 1
+2026-06-23 20:24:44.247|ERROR  |app.finrag_server:chat:181|RAG Chat CRITICAL ERROR: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+2026-06-23 20:24:44.282|ERROR  |app.finrag_server:chat:182|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 140, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+
+2026-06-23 20:33:12.346|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 20:34:35.373|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 20:34:35.405|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 20:45:06.578|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:79|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 20:46:07.207|INFO   |app.finrag_server:chat:104|DEBUG: Raw chatMessages received: [{'role': 'user', 'rawContent': 'What is the "Back to Starbucks" strategy, and why was it implemented?'}]
+2026-06-23 20:46:07.224|INFO   |app.finrag_server:chat:133|DEBUG: Sanitized messages count: 1
+2026-06-23 20:46:07.913|ERROR  |app.finrag_server:chat:181|RAG Chat CRITICAL ERROR: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+2026-06-23 20:46:07.920|ERROR  |app.finrag_server:chat:182|Traceback details: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 140, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CustomerMilvusClient' object has no attribute 'retrieval_and_generate'
+
+2026-06-23 20:52:03.956|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-23 20:52:05.298|INFO   |app.core.vectorstore.customer_milvus_client:init:27|Creating collection 'FIN_RAG'
+2026-06-23 20:52:33.396|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 20:54:03.685|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 20:54:03.717|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 21:04:32.445|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 23:12:39.910|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 23:13:48.004|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 23:13:48.044|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 23:22:20.951|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-23 23:33:37.358|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-23 23:34:37.858|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-23 23:34:37.874|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-23 23:42:56.410|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-24 00:02:43.916|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-24 00:04:22.046|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-24 00:04:22.109|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-24 00:11:29.620|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-24 00:19:43.855|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-24 00:21:06.275|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-24 00:21:06.291|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-24 00:28:06.780|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-24 00:35:40.341|ERROR  |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:120|DEBUG: Error in API call: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 19.466186832s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}]
+2026-06-24 00:46:55.817|ERROR  |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:120|DEBUG: Error in API call: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 3.971369891s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}]
+2026-06-24 22:27:14.818|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-24 22:27:17.165|INFO   |app.core.vectorstore.customer_milvus_client:init:27|Creating collection 'FIN_RAG'
+2026-06-24 22:31:37.505|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-24 22:31:39.084|INFO   |app.core.vectorstore.customer_milvus_client:init:27|Creating collection 'FIN_RAG'
+2026-06-24 22:31:58.326|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-24 22:33:18.378|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-24 22:33:18.410|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-24 22:41:06.873|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 00:53:26.272|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 00:54:39.266|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 00:54:39.293|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 01:02:14.212|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:70|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 12:40:33.396|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 12:40:37.939|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 12:41:05.734|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 12:44:10.192|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 12:44:10.224|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 12:53:37.391|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:72|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 12:57:57.594|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+    results = self.client.search(
+              ^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:06:47.999|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:07:07.790|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 13:08:46.914|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 13:08:46.943|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 13:19:56.302|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:72|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 13:20:33.930|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:23:17.823|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:31:41.381|ERROR  |app.finrag_server:chat:101|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 80, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 76, in retrieval_and_generate
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1298, in search
+    return self._execute_search(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1190, in _execute_search
+    check_status(response.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=101, message=Collection 'FIN_RAG' is in state 'released'; call load() before search/get/query)>
+
+2026-06-25 13:34:28.169|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 13:34:29.261|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 13:34:29.270|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 13:34:53.322|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 13:36:16.413|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 13:36:16.443|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 13:43:27.758|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 13:52:54.419|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 15:13:08.750|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 15:13:11.712|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 15:13:11.717|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 15:13:28.535|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 15:15:55.946|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 15:15:55.997|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 15:24:14.870|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 15:25:27.573|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 15:29:42.204|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 15:37:40.925|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 15:38:44.351|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 15:38:46.595|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 15:38:46.595|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 15:39:04.070|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 15:40:40.464|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 15:40:40.495|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 15:50:03.389|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 16:06:10.094|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 16:17:21.701|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 16:18:36.759|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 16:18:38.657|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 16:18:38.676|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 16:18:59.062|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 16:28:29.608|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 16:28:30.994|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 16:28:30.996|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 16:28:47.616|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 16:28:52.503|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 19:48:01.784|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 19:48:02.797|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 19:48:02.797|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 19:49:32.022|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 19:50:37.926|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 19:50:37.958|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 19:58:17.998|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 19:58:49.922|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 19:58:51.216|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:02:42.864|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:02:43.075|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:03:51.217|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:03:52.581|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:03:52.588|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:05:08.640|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:05:12.926|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:09:01.391|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:09:02.485|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:09:02.485|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:10:49.051|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:10:54.131|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:18:35.836|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:18:37.049|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:18:37.049|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:19:23.968|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:19:28.750|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:22:15.882|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:22:16.812|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:22:16.818|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:22:31.230|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:22:35.632|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:26:16.322|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:26:17.227|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:26:17.227|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:26:39.502|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:26:43.599|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:27:07.542|ERROR  |app.finrag_server:chat:89|DEBUG: response is None! Check if send_to_gemini or rag_result failed.
+2026-06-25 20:29:56.703|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:29:57.604|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:29:57.611|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:30:12.049|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:30:16.103|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 20:30:39.829|INFO   |app.finrag_server:chat:87|DEBUG: rag_result type: <class 'NoneType'>, value: None
+2026-06-25 20:30:39.829|ERROR  |app.finrag_server:chat:92|DEBUG: response is None! Check if send_to_gemini or rag_result failed.
+2026-06-25 20:34:58.668|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:34:59.507|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:34:59.507|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:35:15.062|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:35:18.728|ERROR  |app.finrag_server:chat:108|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 83, in chat
+    logger.info(f"DEBUG: Embedding generated: {len(query_emb) if query_emb else 'None'}")
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+2026-06-25 20:46:45.584|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 20:46:46.697|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 20:46:46.697|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 20:47:02.497|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 20:47:05.932|ERROR  |app.finrag_server:chat:108|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 83, in chat
+    logger.info(f"DEBUG: Embedding generated: {len(query_emb) if query_emb else 'None'}")
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+2026-06-25 21:07:56.894|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:07:58.021|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:07:58.027|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:08:13.866|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:08:13.869|ERROR  |app.finrag_server:chat:112|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 84, in chat
+    if query_emb is not None:
+       ^^^^^^^^^
+NameError: name 'query_emb' is not defined
+
+2026-06-25 21:10:26.261|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:10:26.264|ERROR  |app.finrag_server:chat:112|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 84, in chat
+    #query_emb = embedding_client.get_embedding([user_input])
+       ^^^^^^^^^
+NameError: name 'query_emb' is not defined
+
+2026-06-25 21:11:02.870|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:11:04.497|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:11:04.501|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:11:17.628|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:11:17.629|INFO   |app.finrag_server:chat:89|DEBUG: Embedding generated: None
+2026-06-25 21:11:17.634|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 21:11:17.700|ERROR  |app.finrag_server:chat:114|RAG Chat CRITICAL ERROR: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 90, in chat
+    rag_result = cmc.retrieval_and_generate(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 97, in retrieval_and_generate
+    results = self.client.search(**search_params)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 464, in search
+    return conn.search(
+           ^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 1255, in search
+    check_id_and_data(ids, data)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\check.py", line 414, in check_id_and_data
+    raise ParamError(message="Either ids or data must be provided")
+pymilvus.exceptions.ParamError: <ParamError: (code=1, message=Either ids or data must be provided)>
+
+2026-06-25 21:14:51.262|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:14:52.321|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:14:52.321|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:15:11.548|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:15:16.275|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-25 21:15:16.277|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 21:15:43.562|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:18:59.003|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:19:00.064|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:19:00.069|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:26:13.277|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:26:18.029|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-25 21:26:18.035|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 21:26:45.521|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:29:56.092|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:29:57.157|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:29:57.161|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:30:12.270|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:30:16.212|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-25 21:30:16.214|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 21:30:40.896|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:33:45.772|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:33:46.826|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:33:46.841|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:34:00.546|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:34:05.055|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-25 21:34:05.058|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 21:34:14.614|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:156|Rate limited (429). Retrying in 2s...
+2026-06-25 21:34:18.626|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:156|Rate limited (429). Retrying in 4s...
+2026-06-25 21:34:24.584|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:156|Rate limited (429). Retrying in 8s...
+2026-06-25 21:34:34.688|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:156|Rate limited (429). Retrying in 16s...
+2026-06-25 21:34:52.904|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:156|Rate limited (429). Retrying in 32s...
+2026-06-25 21:35:24.906|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:49:23.457|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-25 21:49:24.961|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-25 21:49:24.961|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-25 21:49:42.087|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 21:49:47.928|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-25 21:49:47.932|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 21:49:57.479|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 2s...
+2026-06-25 21:50:02.230|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 4s...
+2026-06-25 21:50:10.007|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 8s...
+2026-06-25 21:50:20.295|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 16s...
+2026-06-25 21:50:38.359|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 32s...
+2026-06-25 21:51:10.378|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
+2026-06-25 21:51:32.899|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-25 21:52:53.196|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-25 21:52:53.225|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-25 22:02:53.234|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-25 22:30:19.529|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-25 22:30:20.155|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-25 22:30:20.166|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-25 22:30:33.103|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 2s...
+2026-06-26 14:07:15.452|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 14:07:18.457|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 14:07:18.459|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 14:07:37.217|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 14:10:58.525|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-26 14:10:58.557|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-26 14:19:47.629|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-26 14:20:57.085|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-26 14:20:59.562|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-26 14:20:59.592|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-26 14:35:54.091|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What are the key differences between the North America and International segments in terms of store development, market maturity, and operational challenges?'}]
+2026-06-26 14:35:54.316|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-26 14:35:54.325|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-26 14:37:58.685|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': "What are some of the primary risks related to Starbucks' international operations, as described in the Risk Factors section?"}]
+2026-06-26 14:37:58.937|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-26 14:37:58.940|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...

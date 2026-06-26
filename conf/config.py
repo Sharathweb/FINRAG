@@ -1,46 +1,49 @@
 import os
+from pathlib import Path
+from pydantic import Field
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+class Settings(BaseSettings):
+    GEMINI_API_KEY: str = Field(validation_alias="google_api_key")
+    EMBEDDING_MODEL: str = "maidalun1020/bce-embedding-base_v1"
+    
+    model_config = SettingsConfigDict(env_file=".env")
+
+# 2. Create the instance
+settings = Settings()
+
+BASE_DIR = Path("D:/RAG Project/FinRAG")
+VECTOR_DB_PATH = os.getenv("MILVUS_URI", str(BASE_DIR / "milvus_local.db"))
 
 # Milvus & Model Configuration
 COLLECTION_NAME = "FIN_RAG"
-CHUNK_SIZE = 500  # Renamed from SENTENCE_SIZE for clarity
+CHUNK_SIZE = 1000  # Increased to keep related sentences together
 DEVICE = "cpu"
-EMBEDDING_MODEL = "maidalun1020/bce-embedding-base_v1"
+EMBEDDING_MODEL = settings.EMBEDDING_MODEL
 RERANK_MODEL = "maidalun1020/bce-reranker-base_v1"
-MILVUS_URI = "http://localhost:19530"
+GEMINI_API_KEY = settings.GEMINI_API_KEY
 
 # Notification & Storage
 NOTIFY_URL = "http://39.96.174.204/api/medical-assistant/knowledge/file/vector/complete"
 CACHE_DIR = ".cache"
-STORAGE_TYPE = "local"  # Options: "local" or "oss"
+STORAGE_TYPE = "local"
 STORAGE_DIR = "storage"
 
-# Create cache directory if it doesn't exist
 if not os.path.exists(CACHE_DIR):
     os.makedirs(CACHE_DIR)
 
-# Prompt for summarizing chat titles
-DIALOGUE_SUMMARY = """Summarize the following conversation into a concise title.
-Context:
-{context}
+# Core RAG Prompt - Updated to be more helpful and less restrictive
+RAG_PROMPT = """You are a helpful assistant. Use the following Reference Information to answer the question.
+If the reference information is not sufficient, please provide an answer based on your general knowledge but mention if you are doing so.
+Do not refuse to answer unless the question is completely unrelated to financial or business topics.
 
-Please limit the summary to 20 words.
-Your summary:"""
-
-# Core RAG Prompt
-RAG_PROMPT = """Reference Information:
+Reference Information:
 {context}
 ---
-My Question or Instruction:
+My Question:
 {question}
 ---
-Please answer the question or follow the instructions based on the provided reference information.
-- Reply in the same language as the question or instruction.
-- Use the provided reference information only if it is relevant.
-- If the information is relevant, select the most pertinent parts to support your answer.
-- If the reference information does not contain the answer, reply: "I cannot answer this question based on the provided information."
-- Do not make up answers.
-
 Your Response:"""
 
 if __name__ == "__main__":
-    print(RAG_PROMPT.format(context="Apple Inc. is headquartered in Cupertino.", question="Where is Apple based?"))
+    print("Config Loaded Successfully.")

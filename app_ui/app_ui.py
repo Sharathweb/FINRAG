@@ -57,21 +57,49 @@ if prompt := st.chat_input("Ask about financial reports..."):
         try:
             # Pointing to your FastAPI server running on localhost:8000
             response = requests.post("http://127.0.0.1:8000/chat", json=payload)
-            if response.status_code == 422:
-                st.error("422 Error: " + str(response.json()))
-            result = response.json().get("data", {})
-            answer = result.get("answer", "Error: No answer returned.")
-            chunks = result.get("chunks", [])
+
+            #raw_text = response.text
+
+            #st.write("--- DEBUG INFO ---")
+            #st.write(f"Status Code: {response.status_code}")
+            #st.write(f"Raw Response Body: {raw_text}")
+            #st.write(f"Is it a string? {isinstance(raw_text, str)}")
+
+            #print(f"DEBUG: Status Code: {response.status_code}")
+            #print(f"DEBUG: Response Content: {response.text}")
+            #print(f"DEBUG: Type of response is {type(response.json())}")
             
-            st.markdown(answer)
+            if response.status_code == 200:
+                # Safely parse JSON
+                full_json = response.json()
+                
+                # Check for success key from your ResponseFactory
+                if full_json.get("success", False):
+                    result = full_json.get("data", {})
+                    answer = result.get("answer", "Error: No answer returned.")
+                    chunks = result.get("chunks", [])
+                    
+                    st.markdown(answer)
+                    
+                    # Feature: Citations/Chunks Expander
+                    if chunks:
+                        with st.expander("View Source Citations"):
+                            for item in chunks:
+                                if isinstance(item, dict):
+                                    st.write(f"**Source:** {item.get('index', 'N/A')} (Score: {item.get('score', 0):.2f})")
+                                    st.text(item.get('chunk', ''))
+                                else:
+                                    st.text(item)
+                                
+                    st.session_state.messages.append({"role": "assistant", "content": answer})
+                else:
+                    # Backend-side error (e.g., Milvus released)
+                    st.error(f"Backend Error: {full_json.get('message', 'Unknown error')}")
             
-            # Feature: Citations/Chunks Expander
-            if chunks:
-                with st.expander("View Source Citations"):
-                    for chunk in chunks:
-                        st.write(f"**Source:** {chunk['index']} (Score: {chunk['score']:.2f})")
-                        st.text(chunk['chunk'])
-                        
-            st.session_state.messages.append({"role": "assistant", "content": answer})
+            else:
+                # HTTP-side error (e.g., 500 Internal Server Error)
+                st.error(f"Server returned status {response.status_code}: {response.text}")
+                
         except Exception as e:
-            st.error(f"Failed to connect to backend: {e}")
+            # Catch network or parsing errors
+            st.error(f"Frontend connection error: {e}")
