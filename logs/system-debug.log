@@ -1113,3 +1113,121 @@ pymilvus.exceptions.ParamError: <ParamError: (code=1, message=Either ids or data
 2026-06-26 14:37:58.685|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': "What are some of the primary risks related to Starbucks' international operations, as described in the Risk Factors section?"}]
 2026-06-26 14:37:58.937|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
 2026-06-26 14:37:58.940|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-26 17:05:01.365|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 17:13:51.951|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 17:16:48.798|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 17:16:50.037|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 17:16:50.037|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 17:17:04.807|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 17:18:07.426|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-26 17:18:07.444|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-26 17:26:58.406|ERROR  |app.finrag_server:update_vector:140|Vector Update Error: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 137, in update_vector
+    cmc.embedding_to_vdb(file_details)
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 74, in embedding_to_vdb
+    self.client.insert(collection_name=self.collection_name, data=entities)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 265, in insert
+    res = conn.insert_rows(
+          ^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 121, in handler
+    return func(self, collection_name, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 822, in insert_rows
+    check_status(resp.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[WinError 183] Cannot create a file when that file already exists: 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json.tmp' -> 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json')>
+
+2026-06-26 17:30:18.501|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 17:30:20.231|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 17:30:20.242|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 17:31:44.183|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 17:32:51.903|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-26 17:32:51.942|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-26 17:41:43.174|ERROR  |app.finrag_server:update_vector:140|Vector Update Error: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 137, in update_vector
+    cmc.embedding_to_vdb(file_details)
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 74, in embedding_to_vdb
+    self.client.insert(collection_name=self.collection_name, data=entities)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 265, in insert
+    res = conn.insert_rows(
+          ^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 121, in handler
+    return func(self, collection_name, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 822, in insert_rows
+    check_status(resp.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[WinError 183] Cannot create a file when that file already exists: 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json.tmp' -> 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json')>
+
+2026-06-26 17:44:21.974|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 17:44:23.152|INFO   |app.core.vectorstore.customer_milvus_client:init:29|Creating collection 'FIN_RAG'
+2026-06-26 17:44:23.823|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 17:44:35.132|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 17:45:44.918|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-26 17:45:44.932|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-26 17:54:16.880|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-26 17:54:36.011|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What did the company report regarding its compliance with internal control over financial reporting for fiscal 2025?'}]
+2026-06-26 17:54:36.450|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-26 17:54:36.455|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-26 17:56:11.867|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 17:56:13.177|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 17:56:13.187|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 17:56:25.127|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 19:55:35.992|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 19:55:37.330|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 19:55:37.330|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 19:55:51.011|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 20:20:19.404|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 20:20:21.842|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 20:20:21.846|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 20:21:32.869|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 20:25:35.957|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 20:25:38.587|INFO   |app.core.vectorstore.customer_milvus_client:init:29|Creating collection 'FIN_RAG'
+2026-06-26 20:25:39.218|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 20:26:17.181|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 20:27:04.378|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 20:27:07.141|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 20:27:07.147|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 20:28:48.999|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 20:30:27.671|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 20:30:29.944|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 20:30:29.944|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 20:30:48.444|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-06-26 20:31:56.902|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-06-26 20:31:56.918|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-06-26 20:39:20.042|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-06-26 20:41:57.324|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What did the company report regarding its compliance with internal control over financial reporting for fiscal 2025?'}]
+2026-06-26 20:41:57.694|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-06-26 20:41:57.707|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-06-26 20:44:16.397|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-06-26 20:44:17.484|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-06-26 20:44:17.484|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-06-26 20:45:28.480|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...

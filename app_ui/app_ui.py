@@ -25,14 +25,22 @@ with st.sidebar:
     uploaded_file = st.file_uploader("Upload a new PDF", type="pdf")
     if uploaded_file is not None:
         if st.button("Index Document"):
-            files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")}
-            # Assuming your backend expects a categoryId as a form field
-            data = {"categoryId": "101"} 
-            response = requests.post("http://127.0.0.1:8000/update_vector", files=files, data=data)
-            if response.status_code == 200:
-                st.success(f"Successfully indexed {uploaded_file.name}")
-            else:
-                st.error("Failed to index file.")
+            with st.spinner(f"Indexing {uploaded_file.name}... This may take a while for large PDFs."):
+                files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")}
+                # Assuming your backend expects a categoryId as a form field
+                data = {"categoryId": "101"} 
+
+                try:
+                    response = requests.post("http://127.0.0.1:8000/update_vector", files=files, data=data)
+
+                    if response.status_code == 200:
+                        st.success(f"Successfully indexed {uploaded_file.name}")
+                    else:
+                         st.error("Failed to index file.")
+                except requests.exceptions.Timeout:
+                    st.error("Indexing timed out. The file might be too large for a single request.")
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
 
 # 5. Display Chat History
 for message in st.session_state.messages:

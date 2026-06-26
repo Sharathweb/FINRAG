@@ -656,3 +656,63 @@ pymilvus.exceptions.ParamError: <ParamError: (code=1, message=Either ids or data
 2026-06-25 21:50:38.359|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 32s...
 2026-06-25 21:51:10.378|ERROR  |app.finrag_server:chat:102|FAILURE: cmc.retrieval_and_generate returned None or empty.
 2026-06-25 22:30:33.103|WARNING|app.core.vectorstore.customer_milvus_client:retrieval_and_generate:162|Rate limited (429). Retrying in 2s...
+2026-06-26 17:26:58.406|ERROR  |app.finrag_server:update_vector:140|Vector Update Error: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 137, in update_vector
+    cmc.embedding_to_vdb(file_details)
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 74, in embedding_to_vdb
+    self.client.insert(collection_name=self.collection_name, data=entities)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 265, in insert
+    res = conn.insert_rows(
+          ^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 121, in handler
+    return func(self, collection_name, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 822, in insert_rows
+    check_status(resp.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[WinError 183] Cannot create a file when that file already exists: 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json.tmp' -> 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json')>
+
+2026-06-26 17:41:43.174|ERROR  |app.finrag_server:update_vector:140|Vector Update Error: Traceback (most recent call last):
+  File "D:\RAG Project\FinRAG\app\finrag_server.py", line 137, in update_vector
+    cmc.embedding_to_vdb(file_details)
+  File "D:\RAG Project\FinRAG\app\core\vectorstore\customer_milvus_client.py", line 74, in embedding_to_vdb
+    self.client.insert(collection_name=self.collection_name, data=entities)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\milvus_client\milvus_client.py", line 265, in insert
+    res = conn.insert_rows(
+          ^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 521, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 518, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 565, in handler
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 456, in handler
+    raise e from e
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 419, in handler
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\decorators.py", line 121, in handler
+    return func(self, collection_name, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\grpc_handler.py", line 822, in insert_rows
+    check_status(resp.status)
+  File "D:\RAG Project\FinRAG\.venv\Lib\site-packages\pymilvus\client\utils.py", line 77, in check_status
+    raise MilvusException(status.code, status.reason, status.error_code)
+pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[WinError 183] Cannot create a file when that file already exists: 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json.tmp' -> 'D:\\RAG Project\\FinRAG\\milvus_local.db\\collections\\FIN_RAG\\manifest.json')>
+

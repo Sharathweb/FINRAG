@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv # Import this
 from openai import OpenAI
 from utils.utils import logger
+import httpx
 
 # Load the .env file at the top of your file
 load_dotenv()
@@ -9,6 +10,8 @@ load_dotenv()
 class OpenChat:
     def __init__(self) -> None:
         self.api_key = os.getenv("GOOGLE_API_KEY")
+
+        http_client = httpx.Client(proxies=None)
         # Ensure the base_url ends with 'openai/'
         self.client = OpenAI(
             api_key=self.api_key,
