@@ -9,8 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt -i https://mirrors.aliyun.com
 # Copy application
 COPY . .
 
-RUN chmod +x start.sh
+RUN chmod +x bin/start.sh
 
 # Simply run your application entry point directly
 # No need for bin/start.sh or Docker-based database orchestration
-CMD ["./start.sh"]
+CMD ["./bin/start.sh"]
