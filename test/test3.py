@@ -13,7 +13,7 @@ if __name__ == "__main__":
     file_path = "example/test3.txt"
     l1_kb = "test1"
     l2_kb = "test2"
-    embedding_model = "/data/gpu/base_models/bge-large-zh-v1.5"
+    embedding_model = "sentence-transformers/all-MiniLM-L6-v2"
     lf = FileProcesser(l1_kb, l2_kb, file_path)
     embedding_client = EmbeddingClient(embedding_model)
 

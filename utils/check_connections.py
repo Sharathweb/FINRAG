@@ -8,7 +8,7 @@ db_path = os.getenv("MILVUS_URI", "./milvus_local.db")
 
 try:
     # 2. Initialize the client (This acts as your connection)
-    client = MilvusClient(uri=db_path)
+    client = MilvusClient(uri="/data/milvus_local.db")
     
     print(f"Successfully connected to Milvus: {db_path}")
     
