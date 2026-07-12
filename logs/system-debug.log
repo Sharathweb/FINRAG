@@ -1231,3 +1231,23 @@ pymilvus.exceptions.MilvusException: <MilvusException: (code=1, message=[WinErro
 2026-06-26 20:44:17.484|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
 2026-06-26 20:44:17.484|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
 2026-06-26 20:45:28.480|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-07-01 23:50:40.657|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-07-01 23:50:42.813|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-07-01 23:50:42.815|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-07-01 23:52:18.933|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-07-01 23:53:41.501|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-07-01 23:53:41.529|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-07-02 00:02:00.128|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-07-02 00:09:36.420|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What did the company report regarding its compliance with internal control over financial reporting for fiscal 2025?'}]
+2026-07-02 00:09:37.277|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-07-02 00:09:37.297|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
+2026-07-12 21:04:23.036|INFO   |app.core.preprocessor.file_processor:__init__:18|Successfully initialized file processor
+2026-07-12 21:04:25.176|INFO   |app.core.vectorstore.customer_milvus_client:init:36|Collection 'FIN_RAG' already exists.
+2026-07-12 21:04:25.180|INFO   |app.core.vectorstore.customer_milvus_client:init:39|Collection 'FIN_RAG' loaded into memory.
+2026-07-12 21:07:26.220|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:21|Starting file parsing. Larger files will take longer; please be patient...
+2026-07-12 21:08:33.007|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:39|Number of documents before splitting: 1
+2026-07-12 21:08:33.025|INFO   |app.core.preprocessor.file_processor:split_file_to_docs:41|Number of documents after splitting: 955
+2026-07-12 21:20:00.936|INFO   |app.core.vectorstore.customer_milvus_client:embedding_to_vdb:75|Successfully indexed StarBucks.pdf with 955 chunks
+2026-07-12 22:01:45.629|INFO   |app.finrag_server:chat:60|Received request: chatId='ui-session' ownerId='default' chatName='Dashboard Chat' initInputs={'categoryIds': ['101']} initOpening='' chatMessages=[{'role': 'user', 'rawContent': 'What did the company report regarding its compliance with internal control over financial reporting for fiscal 2025?'}]
+2026-07-12 22:01:46.659|INFO   |app.finrag_server:chat:90|DEBUG: Embedding generated: None
+2026-07-12 22:01:46.667|INFO   |app.core.vectorstore.customer_milvus_client:retrieval_and_generate:81|Loading collection 'FIN_RAG' into memory...
